@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ImageTargetManager : DefaultTrackableEventHandler
-
 {
-
 	[SerializeField]
 	private List<GameObject> _listOfManagmentObjects = new List<GameObject>();
 
 	protected override void Start()
 	{
-
 		base.Start ();
 		StateManagmentObjectsSwitcher (false);
 	}

@@ -19,13 +19,12 @@ public class Rotator : MonoBehaviour {
 
 	void OnEnable()
 	{
-		ManagerInteraction.OnInteractionStateChange += Rotate;
-
+		InteractionManager.OnInteractionStateChange += Rotate;
 	}
 
 	void Disable()
 	{
-		ManagerInteraction.OnInteractionStateChange -= Rotate;
+		InteractionManager.OnInteractionStateChange -= Rotate;
 	}
 
 	void Rotate(bool rotate)
@@ -44,10 +43,8 @@ public class Rotator : MonoBehaviour {
 		while (_rotation) 
 		{
 			yield return new WaitForEndOfFrame ();
-			Debug.Log ("rotation........................");
+			//Debug.Log ("rotation...");
 			_rY = Input.GetAxis ("Mouse Y") * _rSpeed * Mathf.Deg2Rad;
-
-			//transform.Rotate ( 0,  0, _rSpeed);
 			transform.RotateAround (Vector3.up, -_rY);
 		}
 	}

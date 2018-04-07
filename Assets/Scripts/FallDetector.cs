@@ -10,16 +10,6 @@ public class FallDetector : MonoBehaviour {
 	private const float _zMax = 4.74f;
 	private const float _spawnY =  4f;
 
-	void Start () 
-	{
-		
-	}
-	
-	void Update () 
-	{
-		
-	}
-
 	void OnTriggerEnter (Collider col)
 	{
 		if (col.tag == "MO") 
