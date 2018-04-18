@@ -10,11 +10,14 @@ public class Rotator : MonoBehaviour {
 	private Rigidbody _rb;
 	private RigidbodyConstraints _rbCon;
 	private bool _rotation = false;
+	private GameObject _gameObject;
 
 	void Start ()
 	{
 		_rb = transform.GetComponent<Rigidbody>();
 		_rbCon = _rb.constraints;
+
+		_gameObject = gameObject;
 	}
 
 	void OnEnable()
@@ -43,9 +46,18 @@ public class Rotator : MonoBehaviour {
 		while (_rotation) 
 		{
 			yield return new WaitForEndOfFrame ();
-			//Debug.Log ("rotation...");
-			_rY = Input.GetAxis ("Mouse Y") * _rSpeed * Mathf.Deg2Rad;
-			transform.RotateAround (Vector3.up, -_rY);
+
+			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+			RaycastHit hit;
+
+			if (Physics.Raycast (ray, out hit)) 
+			{
+				if (hit.transform.gameObject == _gameObject) 
+				{
+					_rY = Input.GetAxis ("Mouse Y") * _rSpeed * Mathf.Deg2Rad;
+					transform.RotateAround (Vector3.up, -_rY);
+				}
+			}
 		}
 	}
 

@@ -313,6 +313,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114877402640054328, guid: 6f037f28368da9b43b8b56553e5706b3,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f037f28368da9b43b8b56553e5706b3, type: 2}
   m_IsPrefabParent: 0
@@ -353,6 +358,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4143527422552420, guid: 263dddb8b30587941a28fd5dcb2dedb5, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508064170700402, guid: 263dddb8b30587941a28fd5dcb2dedb5,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -922,6 +932,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ada1eab8dff4f7846a92154b181291ee, type: 2}
+    - target: {fileID: 114833084772095678, guid: 36db097ca7ca0424c92ddf6e17f5f0a3,
+        type: 2}
+      propertyPath: _rSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36db097ca7ca0424c92ddf6e17f5f0a3, type: 2}
   m_IsPrefabParent: 0
@@ -949,21 +964,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231167173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e7a46e3622a8440bb2f4da1d6e4894, type: 3}
+  m_Script: {fileID: 11500000, guid: cec00be5838284f4996cff79260cc3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moTransform: {fileID: 0}
-  _ground: {fileID: 0}
-  _mousePosRelG: {x: 0, y: 0, z: 0}
   WhatIsMO:
+    serializedVersion: 2
     m_Bits: 256
   whatIsGround:
+    serializedVersion: 2
     m_Bits: 512
-  _moYOffsetFromGround: 8
-  _mousePosYOffsetGround: 0.1
   _mousePosMarker: {fileID: 1407400342}
-  _moGrabbed: 0
-  _manager: {fileID: 0}
+  _moYOffsetFromGround: 10
+  _mousePosYOffsetGround: 0.1
 --- !u!4 &1231167175
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,7 +1467,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1835688940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f794619711a68849a263a1faadad137, type: 3}
+  m_Script: {fileID: 11500000, guid: a9323361ea59b854e9b50637f5e44410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interaction: {fileID: 1231167174}
